@@ -1,0 +1,30 @@
+#botonCrear {
+    font-weight: bold;
+    background-color: #ffcb00;
+    box-shadow: 0px 2px 16px 4px rgba(0, 0, 0, 0.36);
+    -webkit-box-shadow: 0px 2px 16px 4px rgba(0, 0, 0, 0.36);
+    -moz-box-shadow: 0px 2px 16px 4px rgba(0, 0, 0, 0.36);
+}
+
+#botonCrear:hover {
+    background-color: #ffcb00;
+}
+
+#botonCrear:active {
+    box-shadow: none;
+}
+
+#botonVolver {
+    font-weight: bold;
+    box-shadow: 0px 2px 16px 4px rgba(0, 0, 0, 0.36);
+    -webkit-box-shadow: 0px 2px 16px 4px rgba(0, 0, 0, 0.36);
+    -moz-box-shadow: 0px 2px 16px 4px rgba(0, 0, 0, 0.36);
+}
+
+#botonCrear:hover {
+    background-color: #525252;
+}
+
+#botonCrear:active {
+    box-shadow: none;
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>index</title>
+
+  <!-- GOOGLE FONTS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+  <!-- LINK ICONOS BOOTSTRAP -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/botones.css">
+  <link rel="stylesheet" href="/css/footer.css">
+</head>
+
+<body>
+  <!--  NAVBAR   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+  <nav class="navbar navbar-expand-lg navBar">
+    <div class="containerImg">
+
+      <a th:href="@{/}" class="navbar-brand d-flex align-items-center">
+        <img class="logoEgg" src="/img/Egg.png" alt="Img admin logo"><b><i>NEWS </i></b>📰🗞
+      </a>
+    </div>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- PANEL ADMIN >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <div class="collapse navbar-collapse elementosNav" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto elementos">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" th:href="@{/admin}"><b> ⚙️ > Panel Admin</b></a>
+        </li>
+    </div>
+    </div>
+  </nav>
+
+
+  <!-- EXITO / ERROR >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
+
+  <!-- th:if="${exito != null}" = Tag de Thymeleaf + condición -->
+  <div th:if="${exito}!=null" class="card text-white bg-success mb-3 mt-3 mensajeExito">
+    <div class="card-body">
+      <h5 class="card-title">Exito! 👍</h5>
+
+      <!-- Llamo a la llave ${ modelo.put("exito", exception.getMessage()); } desde clase AutorControlador -->
+      <p class="card-text" th:text="${exito}"></p>
+    </div>
+  </div>
+
+  <!-- th:if="${error != null}" = Tag de Thymeleaf + condición -->
+  <div th:if="${error}!=null" class="card text-white bg-danger mb-3 mensajeError">
+    <!-- Llamo a la llave ${ modelo.put("error", exception.getMessage()); } desde clase AutorControlador -->
+
+    <div class="card-body">
+      <h5 class="card-title">Error 👎</h5>
+
+      <!-- Llamo a la llave ${ modelo.put("error", exception.getMessage()); } desde clase AutorControlador -->
+      <p class="card-text" th:text="${error}"></p>
+    </div>
+  </div>
+
+
+  <!-- IMG + TEXTO DEL INDEX >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
+  <div class="container">
+    <div class="row">
+      <div class="col">
+
+        <header class="header">
+          <section class="contenedorMain">
+            <div class="tituloNew">NOTI-EGG</div>
+            <div class="container contenedorLibros">
+              <p class="subtituloNew">Encontrá todas las noticias Aquí!</p>
+
+              <!-- BOTÓN AMARILLO DEL INDEX >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
+              <!-- <p class="tituloLibros" th:if="${session.usuariosession != null}"
+                th:text=" 'Hola de vuelta '+ ${session.usuariosession.nombre} "></p>
+              <a href=/libro/lista class="btn btn-xl mt-2 boton">Ver Listado</a> -->
+            </div>
+
+            <div class="bg-circle-1 bg-circle"></div>
+            <div class="bg-circle-2 bg-circle"></div>
+            <div class="bg-circle-3 bg-circle"></div>
+            <div class="bg-circle-4 bg-circle"></div>
+          </section>
+        </header>
+      </div>
+
+      <div class="col">
+        <img class="cartoons" src="/img/cartoons.png" alt="cartoons">
+      </div>
+    </div>
+  </div>
+
+  <div class="espacioBlanco"><br><br><br></div>
+
+  <!-- TARJETAS /CARDS -->
+
+  <div class="gridTarjetas">
+  <div th:each="noticia : ${noticias}">
+    <div class="row row-cols-1 row-cols-md-20 g-4">
+      <div class="col">
+        <div class="card h-100" id="tarjeta">
+
+          <!-- <img th:src="@{/src/main/resources/static/img/newsletter.jpg}" class="card-img-top" alt="foto-Noticia" /> -->
+
+          <div class="card-body">
+            <h4 class="card-title" th:text="${noticia.titulo}"></h4>
+            <p class="card-text" th:text="${noticia.cuerpo}"></p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted" th:text="${noticia.alta}"></small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+</div>
+
+
+
+  <!-- PIE DE PÁGINA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
+  <footer class="text-muted py-5">
+    <div class="containerFooter">
+      <p class="mb-1">Copyright &copy; truquinio,<br> all rights reserved</p>
+      <p class="mb-0">Visit my <a href="https://github.com/truquinio"><br>GitHub</a> profile or visit my <a
+          href="https://www.linkedin.com/in/federico-trucco/">LinkedIn</a> profile.</p>
+      <p class="float-end mb-1">
+        <a href="#" style="text-decoration:none"><span>⬆️</span> Ir al cielo</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Script de Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

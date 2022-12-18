@@ -1,0 +1,36 @@
+.navBar {
+    background-color: #fff !important;
+    size: 100%;
+}
+
+.navbar-brand{
+    margin-top: 5px;
+    /* width: 30%; */
+    justify-content: space-around;
+    color: #37474f;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.elementosNav {
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+    color: #37474f;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+.elementos {
+    margin-right: 50px;
+}
+
+.containerImg {
+    width: 20%;
+}
+
+.logoEgg {
+    width: 40%;
+    margin: auto;
+}
