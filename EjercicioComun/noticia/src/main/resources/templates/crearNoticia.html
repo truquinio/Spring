@@ -54,41 +54,39 @@
   <header class="header">
     <div class="container m-5">
       <h4>📰 Cargar noticia:</h4>
-  
-  <div class="container">
-    <form action="/noticia/creando" method="post">
 
-      <div class="form-group">
-        <input type="text" class="form-group" placeholder="Titulo de noticia" name="titulo" required
-        minlength="1" maxlength="100" size="100">
-      </div>
-      <div class="form-group">
-        <div class="form-floating">
-          <textarea class="form-control" placeholder="Cuerpo de noticia" id="floatingTextarea2" name="cuerpo" required
-          minlength="10" maxlength="60000"></textarea>
-          <label for="floatingTextarea2">Cuerpo de la noticia</label>
-        </div>
-      </div>
+      <div class="container">
+        <form action="/noticia/creando" method="post">
 
-  <p>
-    <input type="file" name="Cargar foto" multiple>
-  </p>
-
-      <button type="submit" class="btn btn-primary">Cargar</button>
-    </form>
-  </div>
-</header>
-
-
-      <!-- BOTÓN CARGAR >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
-      <section class=" text-center container">
-        <div class="row mt-3">
-          <div class="divVolver">
-            <button type="submit" class="btn btn-xl mt-2 boton" id="botonCrear">Cargar</button>
+          <div class="form-group">
+            <input type="text" class="form-group" placeholder="Titulo de noticia" name="titulo" required minlength="1"
+              maxlength="100" size="100">
           </div>
-        </div>
-      </section>
-    </form>
+          <div class="form-group">
+            <div class="form-floating">
+              <textarea class="form-control" placeholder="Cuerpo de noticia" id="floatingTextarea2" name="cuerpo"
+                required minlength="10" maxlength="60000"></textarea>
+              <label for="floatingTextarea2">Cuerpo de la noticia</label>
+            </div>
+          </div>
+
+          <p>
+            <input type="file" name="Cargar foto" multiple>
+          </p>
+
+          <!-- <button type="submit" class="btn btn-primary">Cargar</button> -->
+
+          <!-- BOTÓN CARGAR >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
+          <section class=" text-center container">
+            <div class="row mt-3">
+              <div class="divVolver">
+                <button type="submit" class="btn btn-xl mt-2 boton" id="botonCrear">Cargar</button>
+              </div>
+            </div>
+          </section>
+        </form>
+      </div>
+  </header>
   </div>
   </div>
 
