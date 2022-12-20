@@ -17,6 +17,7 @@
   <!-- LINK ICONOS BOOTSTRAP -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 
+
   <!-- CSS -->
   <link rel="stylesheet" href="/css/navbar.css">
   <link rel="stylesheet" href="/css/index.css">
@@ -38,6 +39,7 @@
       aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
 
     <!-- PANEL ADMIN >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
     <div class="collapse navbar-collapse elementosNav" id="navbarNavDropdown">
@@ -111,26 +113,26 @@
   <!-- TARJETAS /CARDS -->
 
   <div class="gridTarjetas">
-  <div th:each="noticia : ${noticias}">
-    <div class="row row-cols-1 row-cols-md-20 g-4">
-      <div class="col">
-        <div class="card h-100" id="tarjeta">
+    <div th:each="noticia : ${noticias}">
+      <div class="row row-cols-1 row-cols-md-20 g-4">
+        <div class="col">
+          <div class="card h-100" id="tarjeta">
 
-          <!-- <img th:src="@{/src/main/resources/static/img/newsletter.jpg}" class="card-img-top" alt="foto-Noticia" /> -->
+            <!-- <img th:src="@{/src/main/resources/static/img/newsletter.jpg}" class="card-img-top" alt="foto-Noticia" /> -->
 
-          <div class="card-body">
-            <h4 class="card-title" th:text="${noticia.titulo}"></h4>
-            <p class="card-text" th:text="${noticia.cuerpo}"></p>
-          </div>
-          <div class="card-footer">
-            <small class="text-muted" th:text="${noticia.alta}"></small>
+            <div class="card-body">
+              <h4 class="card-title" th:text="${noticia.titulo}"></h4>
+              <p class="card-text" th:text="${noticia.cuerpo}"></p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted" th:text="${noticia.alta}"></small>
+            </div>
           </div>
         </div>
       </div>
+      <br>
     </div>
-    <br>
   </div>
-</div>
 
 
 

@@ -58,11 +58,12 @@ public class NoticiaServicio {
 
     //  Ordena la lista de Noticias de manera descendente
     noticiasList = noticiaRepositorio.findAll(Sort.by(Sort.Direction.DESC, "alta"));
+    // Otra Forma: 
+    // noticiasList = noticiaRepositorio.todosDescendente();
 
     // Encuentra noticia dentro de database, los mete en arraylist noticiasList
-    noticiasList = noticiaRepositorio.findAll();
+    // noticiasList = noticiaRepositorio.findAll();
 
-    //return new Sort(Sort.Direction.ASC, "alta");
     return noticiasList;
   }
 
