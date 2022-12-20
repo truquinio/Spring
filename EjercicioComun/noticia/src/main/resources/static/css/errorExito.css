@@ -1,0 +1,11 @@
+.mensajeExito {
+	width: 20%;
+	margin: auto;
+	text-align: center;
+}
+
+.mensajeError {
+	width: 20%;
+	margin: auto;
+	text-align: center;
+}

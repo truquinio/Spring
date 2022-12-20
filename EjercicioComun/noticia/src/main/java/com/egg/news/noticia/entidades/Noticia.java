@@ -20,7 +20,7 @@ public class Noticia {
   private String id;
   private String titulo;
 
-  @Column(columnDefinition = "TEXT")
+  @Column(columnDefinition = "TEXT")  //  @Column(columnDefinition = "TEXT") = Reemplaza VARCHAR(255) por TEXT (65.000 caracteres)
   private String cuerpo;
 
   @Temporal(TemporalType.TIMESTAMP)  //  @Temporal(TemporalType.TIMESTAMP) = Maneja fechas en días y horas

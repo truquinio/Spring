@@ -16,6 +16,12 @@
 
   <!-- LINK ICONOS BOOTSTRAP -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/modificarNoticia.css">
+  <link rel="stylesheet" href="/css/botones.css">
+  <link rel="stylesheet" href="/css/footer.css">
 </head>
 
 <body>
@@ -24,7 +30,7 @@
     <div class="containerImg">
 
       <a th:href="@{/admin}" class="navbar-brand d-flex align-items-center">
-        <img class="logo" src="/img/admin_icon.png" alt="Img admin logo"><b> Panel Admin</b>
+        <img class="logo" src="/img/admin_icon.png" alt="Img admin logo"> <b> Panel Admin</b>
       </a>
     </div>
 
@@ -33,41 +39,69 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- CREAR NOTICIAS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <!-- HOME >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+    <div class="collapse navbar-collapse elementosNav" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto elementos">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/noticia/crear"><b> > Crear Noticia</b></a>
+          <a class="nav-link active" aria-current="page" th:href="@{/}"><b>🏠 > Home</b></a>
         </li>
-      </ul>
     </div>
     </div>
   </nav>
 
 
-  <!-- FORMULARIO EDITAR NOTICIAS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
-    <div class="container m-5">
-      <h4>📰 Modificar Noticia:</h4>
-      <div class="container">
-        <form class="formulario" th:action="@{/noticia/modificar/__${noticia.id}__}" method="POST">
-          <input  th:value="${id}" placeholder="id noticia" name="id" required
-          minlength="1" maxlength="40" size="38">
+  <!-- FORMULARIO EDITAR NOTICIA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
+  <header class="header">
+      <div class="container m-5">
+        <h4>📰 Modificar Noticia:</h4>
 
-          <div class="form-group">
-            <input type="text" class="form-group" placeholder="Titulo de la noticia" name="titulo" required
-            minlength="1" maxlength="100" size="100">
-          </div>
-          
-          <div class="form-group my-3">
-            <div class="form-floating">
-              <textarea class="form-control" placeholder="Cuerpo de la noticia" id="floatingTextarea2"
-                name="cuerpo"></textarea>
-              <label for="floatingTextarea2">Cuerpo de la noticia</label>
+        <div class="container">
+
+          <form class="formuId" th:action="@{/noticia/modificar/__${noticia.id}__}" method="POST">
+            <input th:value="${id}" placeholder="id noticia" name="id" required minlength="1" maxlength="40" size="38">
+
+            <div class="form-group">
+              <input type="text" class="form-group" placeholder="Titulo de la noticia" name="titulo" id="tituloNoticia"
+                required minlength="1" maxlength="100" size="100">
             </div>
-          </div>
-          <button type="submit" class="btn btn-primary mt-3 botones">Actualizar</button>
-    </form>
 
+            <div class="form-group my-3">
+              <div class="form-floating">
+                <textarea class="form-control" placeholder="Cuerpo de la noticia" id="floatingTextarea2"
+                  name="cuerpo"></textarea>
+                  <label for="floatingTextarea2">Cuerpo de la noticia</label>
+                </div>
+              </div>
+    
+              <p>
+                <input type="file" name="Cargar foto" multiple>
+              </p>
+
+            <!-- BOTÓN MODIFICAR + BOTÓN VOLVER (GRID)  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
+            <div class="container text-center">
+              <div class="row">
+
+                <!-- BOTÓN AMARILLO / MODIFICAR NOTICIAS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
+                <div class="col">
+                  <section class="py-5 text-center container">
+                    <button type="submit" class="btn btn-primary mt-3 botones" id="botonActualizar">✅
+                      Actualizar</button>
+                    <!-- <a th:href="@{/noticia/}" class="btn btn-xl mt-2 boton" ></a> -->
+                  </section>
+                </div>
+
+                <!-- BOTÓN VOLVER >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
+                <div class="col">
+                  <section class="py-5 text-center container">
+                    <div class="col-lg-6 col-md-8 mx-auto">
+                      <a href="/admin" class="btn btn-primary my-2" id="botonVolver">⬅️ Volver</a>
+                    </div>
+                  </section>
+                </div>
+          </form>
+        </div>
+    </header>
 
 
     <!-- EXITO / ERROR	>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>	-->
@@ -86,36 +120,27 @@
     </div>
 
 
-    <!-- BOTÓN VOLVER >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
-    <section class="py-5 text-center container">
-      <div class="row py-lg-5">
-        <div class="col-lg-6 col-md-8 mx-auto">
-          <a th:href="@{/}" class="btn btn-primary my-2">Volver</a>
-          </p>
-        </div>
+
+
+    <!-- PIE DE PÁGINA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
+    <footer class="text-muted py-5">
+      <div class="containerFooter">
+        <p class="mb-1">Copyright &copy; truquinio,<br> all rights reserved</p>
+        <p class="mb-0">Visit my <a href="https://github.com/truquinio"><br>GitHub</a> profile or visit my <a
+            href="https://www.linkedin.com/in/federico-trucco/">LinkedIn</a> profile.</p>
+        <p class="float-end mb-1">
+          <a href="#" style="text-decoration:none"><span>⬆️</span> Ir al cielo</a>
+        </p>
       </div>
-    </section>
-  </div>
+    </footer>
 
-  <!-- PIE DE PÁGINA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
-  <footer class="text-muted py-5">
-    <div class="containerFooter">
-      <p class="mb-1">Copyright &copy; truquinio,<br> all rights reserved</p>
-      <p class="mb-0">Visit my <a href="https://github.com/truquinio"><br>GitHub</a> profile or visit my <a
-          href="https://www.linkedin.com/in/federico-trucco/">LinkedIn</a> profile.</p>
-      <p class="float-end mb-1">
-        <a href="#" style="text-decoration:none"><span>⬆️</span> Ir al cielo</a>
-      </p>
-    </div>
-  </footer>
-
-  <!-- Script de Bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
-    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
-    crossorigin="anonymous"></script>
+    <!-- Script de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"></script>
 </body>
 
 </html>

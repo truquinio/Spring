@@ -1,36 +1,42 @@
 .navBar {
-    background-color: #fff !important;
-    size: 100%;
+  background-color: rgb(255, 255, 255) !important;
+  /* size: 100%; */
+  margin-left: 60px;
+  margin-right: 60px;
 }
 
-.navbar-brand{
-    margin-top: 5px;
-    /* width: 30%; */
-    justify-content: space-around;
-    color: #37474f;
-    font-size: 25px;
-    font-weight: 500;
+.logoEgg {
+  
+}
+
+.navbar-brand {
+  margin-top: 5px;
+  /* width: 30%; */
+  justify-content: space-around;
+  color: #37474f;
+  font-size: 25px;
+  font-weight: 500;
 }
 
 .elementosNav {
-    display: flex;
-    width: 30%;
-    justify-content: space-around;
-    color: #37474f;
-    font-size: 18px;
-    font-weight: 500;
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
+  color: #37474f;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 
 .elementos {
-    margin-right: 50px;
+  margin-right: 50px;
 }
 
 .containerImg {
-    width: 20%;
+  width: 20%;
 }
 
 .logoEgg {
-    width: 40%;
-    margin: auto;
+  width: 40%;
+  margin: auto;
 }

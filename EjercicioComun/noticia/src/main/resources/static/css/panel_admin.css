@@ -1,8 +1,16 @@
 .header {
-  background: #D0E4F5 url(../img/FondoZoom_1.png) no-repeat fixed 0 0;
+  background: #ffffff url(../img/FondoZoom_1.png) no-repeat fixed 0 0;
   /* background-image: url(../img/FondoZoom_1.png); */
   background-size: cover;
   height: 600px;
   display: flex;
-  justify-content: end;
+  justify-content: center;
+}
+
+.EditDelete{
+  color: #ffcb00;
+}
+
+.EditDelete:hover{
+  color: #6c757d;
 }

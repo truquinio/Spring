@@ -78,35 +78,30 @@
 
 
   <!-- IMG + TEXTO DEL INDEX >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
-  <div class="container">
-    <div class="row">
-      <div class="col">
+  <header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col">
 
-        <header class="header">
-          <section class="contenedorMain">
-            <div class="tituloNew">NOTI-EGG</div>
-            <div class="container contenedorLibros">
+          <header class="header">
+            <section class="contenedorMain">
+              <div class="tituloNew">NOTI-EGG</div>
               <p class="subtituloNew">Encontrá todas las noticias Aquí!</p>
 
               <!-- BOTÓN AMARILLO DEL INDEX >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
               <!-- <p class="tituloLibros" th:if="${session.usuariosession != null}"
                 th:text=" 'Hola de vuelta '+ ${session.usuariosession.nombre} "></p>
               <a href=/libro/lista class="btn btn-xl mt-2 boton">Ver Listado</a> -->
-            </div>
+            </section>
+          </header>
+        </div>
 
-            <div class="bg-circle-1 bg-circle"></div>
-            <div class="bg-circle-2 bg-circle"></div>
-            <div class="bg-circle-3 bg-circle"></div>
-            <div class="bg-circle-4 bg-circle"></div>
-          </section>
-        </header>
-      </div>
-
-      <div class="col">
-        <img class="cartoons" src="/img/cartoons.png" alt="cartoons">
+        <div class="col">
+          <img class="cartoons" src="/img/cartoons.png" alt="cartoons">
+        </div>
       </div>
     </div>
-  </div>
+  </header>
 
   <div class="espacioBlanco"><br><br><br></div>
 
@@ -123,14 +118,16 @@
             <div class="card-body">
               <h4 class="card-title" th:text="${noticia.titulo}"></h4>
               <p class="card-text" th:text="${noticia.cuerpo}"></p>
-            </div>
-            <div class="card-footer">
-              <small class="text-muted" th:text="${noticia.alta}"></small>
+              <div id="borderFecha">
+                <div class="card-footer">🗓
+                  <small class="text-muted" id="fechaNoticia" th:text="${noticia.alta}"></small>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        <br>
       </div>
-      <br>
     </div>
   </div>
 

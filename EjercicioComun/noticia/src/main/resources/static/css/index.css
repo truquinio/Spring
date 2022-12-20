@@ -4,10 +4,17 @@
   background-size: cover;
   height: 500px;
   display: flex;
+  justify-content: center;
+}
+
+.contenedorMain {
+  margin-right: 100px;
+  margin-top: 120px;
+  text-align: left;
+  font-family: Arial;
 }
 
 .tituloNew {
-  margin-top: 120px;
   font-size: 25px;
   color: #fed100;
   font-family: Arial;
@@ -17,8 +24,6 @@
 .subtituloNew {
   color: #37474f;
   font-size: 50px;
-  text-align: left;
-  font-family: Arial;
   font-weight: 900;
 }
 
@@ -29,8 +34,8 @@
 }
 
 .gridTarjetas {
-  margin-left: 60px;
-  margin-right: 60px;
+  margin-left: 100px;
+  margin-right: 100px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -39,24 +44,39 @@
   text-align: justify;
 }
 
-#tarjeta{
+#tarjeta {
   border-color: #fed100;
-  border-width: 4px;
-  border-radius: 40px;
-  float: right;
+  border: 4px inset #fed100;
+  border-radius: 40px 40px 40px 40px;
+  /* float: right; */
+  box-shadow: 0px 2px 16px 4px rgba(0, 0, 0, 0.36);
+  -webkit-box-shadow: 0px 2px 16px 4px rgba(0, 0, 0, 0.36);
+  -moz-box-shadow: 0px 2px 16px 4px rgba(0, 0, 0, 0.36);
+}
+
+.card-body {
+  border: 5px none #ffffff00;
+  border-radius: 40px 40px 40px 40px;
 }
 
 .card-title {
-  color: #37474f;
+  background: #37474f;
+  color: #ffffff;
   font-weight: bolder;
   text-align: center;
-  border-radius: 40px 40px 0px 0px;
+  border-radius: 40px 40px 40px 40px;
 }
 
-.card-footer {
-  color: #37474f;
+.card-footer{
+  border: 5px none #ffffff00;
+  border-radius: 40px 40px 40px 40px;
+}
+
+#borderFecha {
   text-align: center;
-  border-color: #37474f;
-  border-width: 2px;
-  border-radius: 40px, 40px 40px 40px;
+  background: #37474f;
+  color: #ffffff;
+  border: 5px none #ffffff00;
+  border-radius: 40px 40px 40px 40px;
+  /* box-shadow: 0px 2px 16px 4px  #ffcb00; */
 }
