@@ -115,33 +115,6 @@
             </div>
     </header>
 
-  <!--  TABLA DE NOTICIAS   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-  <!-- <div class="container m-5">
-
-    <table class="table table-dark">
-      <thead>
-        <tr>
-          <th scope="col">Id</th>
-          <th scope="col">Alta</th>
-          <th scope="col">Titulo</th>
-          <th class="d-flex justify-content-evenly" scope="col">Acciones</th>
-
-        </tr>
-      </thead>
-      <tbody th:each="noticia : ${noticias}">
-        <tr>
-          <th scope="row" th:text="${noticia.id}"></th>
-          <td th:text="${noticia.alta}"></td>
-          <td th:text="${noticia.titulo}"></td>
-
-          <td class="d-flex justify-content-evenly">
-            <a th:href="@{/noticia/modificar/__${noticia.id}__}"><i class="bi bi-pen"></i>Modificar</a>
-            <a th:href="@{/noticia/eliminar/__${noticia.id}__}"><i class="bi bi-trash"></i>Eliminar</a>
-          </td>
-        </tr>
-      </tbody>
-    </table> -->
-
 
   <!-- EXITO / ERROR >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
   <div th:if="${exito}!=null" class="card text-white bg-success mb-3 mt-3 mensajeExito">
@@ -180,6 +153,7 @@
     </div>
   </footer>
 
+  
   <!-- Script de Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
@@ -189,5 +163,4 @@
     crossorigin="anonymous"></script>
 
 </body>
-
 </html>
