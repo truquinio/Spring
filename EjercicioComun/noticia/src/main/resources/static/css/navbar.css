@@ -1,16 +1,11 @@
 .navBar {
   background-color: rgb(255, 255, 255) !important;
-  /* size: 100%; */
-  margin-left: 60px;
-  margin-right: 60px;
-}
-
-.logoEgg {
-  
+  width: 100%;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 .navbar-brand {
-  margin-top: 5px;
   /* width: 30%; */
   justify-content: space-around;
   color: #37474f;
@@ -27,9 +22,8 @@
   font-weight: 500;
 }
 
-
 .elementos {
-  margin-right: 50px;
+  padding-right: 50px;
 }
 
 .containerImg {
@@ -38,5 +32,5 @@
 
 .logoEgg {
   width: 40%;
-  margin: auto;
+  padding: auto;
 }

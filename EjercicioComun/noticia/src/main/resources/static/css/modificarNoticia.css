@@ -9,7 +9,7 @@
 
 #formuId {
 	width: 50%;
-	margin: auto;
+	padding: auto;
 	display: flex;
 	flex-direction: column;
 }
