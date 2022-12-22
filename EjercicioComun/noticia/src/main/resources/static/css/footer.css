@@ -6,7 +6,38 @@ footer {
 
 .containerFooter {
   font-family: Arial, sans-serif;
+  color: #37474f;
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+/*  RR.SS */
+.github{
+  color: #ffc041;
+  text-decoration: none;
+}
+
+.github:hover{
+  color: #37474f;
+}
+
+.linkedin{
+  color: #ffc041;
+  text-decoration: none;
+}
+
+.linkedin:hover{
+  color: #37474f;
+}
+
+/*  BOTÓN IR AL CIELO */
+.up-sky{
+  color: #37474f;
+  text-decoration: none;
+}
+
+.up-sky:hover{
+  color: #ffc041;
+  text-decoration: none;
 }
