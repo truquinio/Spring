@@ -9,6 +9,6 @@ public class MainNoticia {
 	public static void main(String[] args) {
 		SpringApplication.run(MainNoticia.class, args);
 
-
+		
 	}
 }

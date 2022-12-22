@@ -7,6 +7,10 @@
   justify-content: center;
 }
 
+.cabecera{
+  font-weight: bolder;
+}
+
 .EditDelete{
   color: #ffcb00;
   text-decoration: none;
