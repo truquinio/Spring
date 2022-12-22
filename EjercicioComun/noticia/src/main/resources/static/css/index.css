@@ -1,6 +1,4 @@
 .container {
-  /* background: #D0E4F5 url(../img/FondoZoom_1.png) no-repeat fixed 0 0; */
-  /* background-image: url(../img/FondoZoom_1.png); */
   background-size: cover;
   text-align: left;
   font-family: Arial;
@@ -30,7 +28,6 @@
 }
 
 .cartoons {
-  /* image-rendering: optimizeQuality; */
   width: 750px;
   height: 500px;
   display: inline-block;
@@ -46,6 +43,7 @@
   grid-column-gap: 40px;
   grid-row-gap: 40px;
   text-align: justify;
+  padding-bottom: 100px;
 }
 
 #tarjeta {
@@ -54,7 +52,6 @@
   border-color: #fed100;
   border: 4px inset #fed100;
   border-radius: 40px 40px 40px 40px;
-  /* float: right; */
   box-shadow: 0px 2px 16px 4px rgba(0, 0, 0, 0.36);
   -webkit-box-shadow: 0px 2px 16px 4px rgba(0, 0, 0, 0.36);
   -moz-box-shadow: 0px 2px 16px 4px rgba(0, 0, 0, 0.36);
@@ -75,11 +72,20 @@
 }
 
 .card-title {
+  padding-top: 5px;
+  height: 35px;
   background: #37474f;
   color: #ffffff;
   font-weight: bolder;
   text-align: center;
   border-radius: 40px 40px 40px 40px;
+}
+
+.card-text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
 }
 
 .card-footer {
@@ -88,7 +94,7 @@
 }
 
 #borderFecha {
-  padding: -3px;
+  height: 35px;
   text-align: center;
   background: #37474f;
   color: #ffffff;
