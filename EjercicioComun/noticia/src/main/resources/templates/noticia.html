@@ -55,21 +55,30 @@
 
   <div class="caja-noticia">
 
-        <div class="noti-img">
-          <!-- <img src="/src/main/resources/static/img/newsletter.jpg" alt="foto noticia"> -->
-        </div>
+    <div class="container">
+    <div class="noti-img">
+      <!-- <img src="/src/main/resources/static/img/newsletter.jpg" alt="foto noticia"> -->
+    </div>
 
-        <h2 class="noti-title" th:text="${noticia.titulo}"></h2>
-        <p class="noti-body" th:text="${noticia.cuerpo}"></p>
+    <h2 class="noti-title" th:text="${noticia.titulo}"></h2>
+    <p class="noti-body" th:text="${noticia.cuerpo}"></p>
 
-        <!-- <h6 class="noti-fecha" th:text="${noticia.alta}">🗓</h6> -->
+    <!-- <h6 class="noti-fecha" th:text="${noticia.alta}">🗓</h6> -->
 
-        <small class="text-muted" id="noti-fecha"
-          th:text="${#dates.format(noticia.alta, '📆 dd MMM yyyy - HH:mm')}"></small>
+    <div class="text-muted" id="noti-fecha" th:text="${#dates.format(noticia.alta, '📆 dd MMM yyyy - HH:mm')}"></div>
 
-        <!-- <small class="text-muted" id="fechaNoticia" th:text="${noticia.alta}"></small> -->
-        <!-- <small class="text-muted" th:text="${#dates.format(noticia.alta, 'dd MMM yyyy HH:mm')}"></small> -->
+    <!-- <small class="text-muted" id="fechaNoticia" th:text="${noticia.alta}"></small> -->
+    <!-- <small class="text-muted" th:text="${#dates.format(noticia.alta, 'dd MMM yyyy HH:mm')}"></small> -->
+
+
+    <!-- BOTÓN VOLVER >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
+    <section class="py-5 text-center container">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <a href="/" class="btn btn-primary my-2" id="botonVolver">⬅️ Volver</a>
       </div>
+    </section>
+  </div>
+</div>
 
 
   <!-- <img th:src="@{/src/main/resources/static/img/newsletter.jpg}" class="card-img-top" alt="foto-Noticia" /> -->
@@ -79,7 +88,6 @@
     <h5 th:text="${noticia.alta}"></h5>
     <p th:text="${noticia.cuerpo}"></p>
   </div> -->
-
 
 
   <!-- PIE DE PÁGINA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->

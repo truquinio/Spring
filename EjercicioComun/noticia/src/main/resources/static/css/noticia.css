@@ -1,14 +1,14 @@
 .caja-noticia {
   background: #ffffff url(../img/Fondo\ Zoom_5.png) no-repeat fixed 0 0;
-  background-size: cover;
+  background-size: 100%;
 
-
-  padding-top: 120px;
-  padding-left: 80px;
-  padding-right: 80px;
   text-align: center;
   color: #37474f;
   font-family: Arial, sans-serif;
+
+  padding-top: 120px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 .noti-img{
@@ -19,21 +19,24 @@
 
 .noti-title {
   background: #37474f;
+  text-align: center;
   color: #ffffff;
   font-weight: bolder;
-  text-align: center;
   border-radius: 40px 40px 40px 40px;
 }
 
 .noti-body{
-  background: rgb(255, 255, 255);
-  padding-top: 20px;
   display: inline-block;
+
+  background: rgb(255, 255, 255);
   text-align: justify;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-bottom: 30px;
+
+  padding-top: 50px;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 80px;
   border-radius: 40px 40px 40px 40px;
+
   box-shadow: 0px 2px 16px 4px rgba(0, 0, 0, 0.36);
   -webkit-box-shadow: 0px 2px 16px 4px rgba(0, 0, 0, 0.36);
   -moz-box-shadow: 0px 2px 16px 4px rgba(0, 0, 0, 0.36);
@@ -41,11 +44,9 @@
 
 #noti-fecha {
   display: inline-block;
-  align-content: center;
-  width: 50%;
   text-align: center;
   background: #37474f;
   color: #ffffff;
+  width: 40%;
   border-radius: 40px 40px 40px 40px;
-  margin-bottom: 50px;
 }
