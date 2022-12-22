@@ -1,4 +1,8 @@
-.leer-noticia {
+.caja-noticia {
+  background: #ffffff url(../img/Fondo\ Zoom_5.png) no-repeat fixed 0 0;
+  background-size: cover;
+
+
   padding-top: 120px;
   padding-left: 80px;
   padding-right: 80px;
@@ -22,15 +26,22 @@
 }
 
 .noti-body{
-  margin-top: 20px;
+  background: rgb(255, 255, 255);
+  padding-top: 20px;
   display: inline-block;
   text-align: justify;
   padding-left: 40px;
   padding-right: 40px;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
+
+  border-radius: 40px 40px 40px 40px;
+
+  box-shadow: 0px 2px 16px 4px rgba(0, 0, 0, 0.36);
+  -webkit-box-shadow: 0px 2px 16px 4px rgba(0, 0, 0, 0.36);
+  -moz-box-shadow: 0px 2px 16px 4px rgba(0, 0, 0, 0.36);
 }
 
-.noti-fecha {
+#noti-fecha {
   display: inline-block;
   align-content: center;
   width: 50%;
@@ -38,5 +49,5 @@
   background: #37474f;
   color: #ffffff;
   border-radius: 40px 40px 40px 40px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }

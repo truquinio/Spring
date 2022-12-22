@@ -51,26 +51,35 @@
   </nav>
 
 
-      <div class="leer-noticia">
-      <div class="noti-img">
-        <img src="/src/main/resources/static/img/newsletter.jpg" alt="foto noticia">
-      </div>
+  <!--  NOTICIA   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+  <div class="caja-noticia">
+
+        <div class="noti-img">
+          <!-- <img src="/src/main/resources/static/img/newsletter.jpg" alt="foto noticia"> -->
+        </div>
 
         <h2 class="noti-title" th:text="${noticia.titulo}"></h2>
         <p class="noti-body" th:text="${noticia.cuerpo}"></p>
 
-        <h6 class="noti-fecha" th:text="${noticia.alta}">🗓</h6>
+        <!-- <h6 class="noti-fecha" th:text="${noticia.alta}">🗓</h6> -->
+
+        <small class="text-muted" id="noti-fecha"
+          th:text="${#dates.format(noticia.alta, '📆 dd MMM yyyy - HH:mm')}"></small>
+
+        <!-- <small class="text-muted" id="fechaNoticia" th:text="${noticia.alta}"></small> -->
+        <!-- <small class="text-muted" th:text="${#dates.format(noticia.alta, 'dd MMM yyyy HH:mm')}"></small> -->
       </div>
 
 
   <!-- <img th:src="@{/src/main/resources/static/img/newsletter.jpg}" class="card-img-top" alt="foto-Noticia" /> -->
-
 
   <!-- <div>
     <h1 th:text="${noticia.titulo}"></h1>
     <h5 th:text="${noticia.alta}"></h5>
     <p th:text="${noticia.cuerpo}"></p>
   </div> -->
+
 
 
   <!-- PIE DE PÁGINA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->

@@ -118,8 +118,11 @@
                 <p class="card-text" th:text="${noticia.cuerpo}"></p>
 
                 <div id="borderFecha">
-                  <div class="card-footer">🗓
-                    <small class="text-muted" id="fechaNoticia" th:text="${noticia.alta}"></small>
+                  <div class="card-footer">
+                    <small class="text-muted" th:text="${#dates.format(noticia.alta, '📆 dd MMM yyyy - HH:mm')}"></small>
+
+                    <!-- <small class="text-muted" id="fechaNoticia" th:text="${noticia.alta}"></small> -->
+                    <!-- <small class="text-muted" th:text="${#dates.format(noticia.alta, 'dd MMM yyyy HH:mm')}"></small> -->
                   </div>
                 </div>
               </div>
