@@ -27,11 +27,11 @@
 
 <body>
   <!--  NAVBAR   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-  <nav class="navbar navbar-expand-lg navBar">
+  <nav class="navbar navbar-expand-lg navBar fixed-top">
     <div class="containerImg">
 
       <a th:href="@{/}" class="navbar-brand d-flex align-items-center">
-        <img class="logoEgg" src="/img/Egg.png" alt="Img admin logo"><b><i>NEWS </i></b>📰🗞
+        <img class="logoEgg" src="/img/Egg.png" alt="Img admin logo">📰<b><i>NEWS</i></b>
       </a>
     </div>
 
@@ -78,7 +78,6 @@
 
 
   <!-- IMG + TEXTO DEL INDEX >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
-  <header class="header">
     <div class="container">
       <div class="row">
         <div class="col">
@@ -93,7 +92,6 @@
                 th:text=" 'Hola de vuelta '+ ${session.usuariosession.nombre} "></p>
               <a href=/libro/lista class="btn btn-xl mt-2 boton">Ver Listado</a> -->
             </section>
-          </header>
         </div>
 
         <div class="col">
@@ -101,36 +99,36 @@
         </div>
       </div>
     </div>
-  </header>
 
-  <div class="espacioBlanco"><br><br><br></div>
 
   <!-- TARJETAS /CARDS -->
-
   <div class="gridTarjetas">
+    
     <div th:each="noticia : ${noticias}">
+
       <div class="row row-cols-1 row-cols-md-20 g-4">
         <div class="col">
           <div class="card h-100" id="tarjeta">
 
             <!-- <img th:src="@{/src/main/resources/static/img/newsletter.jpg}" class="card-img-top" alt="foto-Noticia" /> -->
 
-            <div class="card-body">
-              <h4 class="card-title" th:text="${noticia.titulo}"></h4>
-              <p class="card-text" th:text="${noticia.cuerpo}"></p>
-              <div id="borderFecha">
-                <div class="card-footer">🗓
-                  <small class="text-muted" id="fechaNoticia" th:text="${noticia.alta}"></small>
+            <a th:href="@{/noticia/ver/__${noticia.id}__}" class="linkNoticia">
+              <div class="card-body">
+                <h4 class="card-title" th:text="${noticia.titulo}"></h4>
+                <p class="card-text" th:text="${noticia.cuerpo}"></p>
+
+                <div id="borderFecha">
+                  <div class="card-footer">🗓
+                    <small class="text-muted" id="fechaNoticia" th:text="${noticia.alta}"></small>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
-        <br>
       </div>
     </div>
   </div>
-
 
 
   <!-- PIE DE PÁGINA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
@@ -152,5 +150,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
     integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
     crossorigin="anonymous"></script>
+
 </body>
 </html>

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.egg.news.noticia.entidades.Noticia;
 import com.egg.news.noticia.excepciones.MiException;
 import com.egg.news.noticia.servicios.NoticiaServicio;
 
@@ -68,11 +69,8 @@ public class NoticiaControlador {
 
     @GetMapping("/ver/{id}")
     public String ver(@PathVariable String id, ModelMap modelo) {
-        try {
-            noticiaServicio.eliminarNoticia(id);
-        } catch (MiException e) {
-            modelo.put("error", e.getMessage());
-        }
-        return "redirect:/admin";
+        Noticia noticia = noticiaServicio.getOne(id);
+        modelo.put("noticia", noticia);
+        return "noticia.html";
     }
 }

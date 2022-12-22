@@ -1,5 +1,6 @@
 /* CREATE */
 #botonCrear {
+  font-family: Arial, sans-serif;
   color: #37474f;
   font-weight: bold;
   background-color: #ffcb00;
@@ -14,13 +15,9 @@
 
 }
 
-#botonCrear:active {
-  box-shadow: none;
-}
-
-
 /* BACK */
 #botonVolver {
+  font-family: Arial, sans-serif;
   background-color: #37474f;
   border: #37474f;
   font-weight: bold;
@@ -33,13 +30,9 @@
   background-color: #212529;
 }
 
-#botonVolver:active {
-  box-shadow: none;
-}
-
-
 /* UPDATE: */
 #botonActualizar{
+  font-family: Arial, sans-serif;
   color: #37474f;
   font-weight: bold;
   border: #ffcb00;
@@ -52,8 +45,4 @@
 #botonActualizar:hover {
   color: white;
   background-color: #37474f;
-}
-
-#botonActualizar:active {
-  box-shadow: none;
 }

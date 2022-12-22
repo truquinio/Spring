@@ -58,11 +58,11 @@
 
 
   <!-- IMG + TABLA PANEL ADMIN >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
-    <header class="header">
-      <div class="container m-5">
+  <header class="header">
+    <div class="container m-5">
 
-        <!--  TABLA DE NOTICIAS   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-        <div class="tabla">
+      <!--  TABLA DE NOTICIAS   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+      <div class="tabla">
         <table class="table table-dark">
           <thead>
             <tr>
@@ -80,8 +80,9 @@
               <td th:text="${noticia.titulo}"></td>
 
               <td class="d-flex justify-content-evenly">
-                <a class="EditDelete" th:href="@{/noticia/modificar/__${noticia.id}__}"><i class="bi bi-pen"></i>Modificar</a>
-                <a class="EditDelete" th:href="@{/noticia/eliminar/__${noticia.id}__}"><i class="bi bi-trash"></i>Eliminar</a>
+                <a class="EditDelete" th:href="@{/noticia/modificar/__${noticia.id}__}"><i
+                    class="bi bi-pen"></i>Modificar</a>
+                <a class="EditDelete bi bi-trash" th:href="@{/noticia/eliminar/__${noticia.id}__}">Eliminar</a>
               </td>
             </tr>
           </tbody>
@@ -89,31 +90,26 @@
       </div>
 
 
-        <!-- BOTÓN CREAR + BOTÓN VOLVER (GRID)  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
-        <div class="container text-center">
-          <div class="row">
+      <!-- BOTÓN CREAR + BOTÓN VOLVER (GRID)  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
+      <div class="container text-center">
+        <div class="row">
 
-            <div class="col">
-              <!-- BOTÓN AMARILLO / CREAR NOTICIAS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
-              <section class="py-5 text-center container">
-                <a th:href="@{/noticia/crear}" class="btn btn-xl mt-2 boton" id="botonCrear">Crear noticia 📰 </a>
+          <div class="col">
+            <!-- BOTÓN AMARILLO / CREAR NOTICIAS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
+            <section class="py-5 text-center container">
+              <a th:href="@{/noticia/crear}" class="btn btn-xl mt-2 boton" id="botonCrear">Crear noticia 📰 </a>
+            </section>
+          </div>
 
-                <!-- <div class="bg-circle-1 bg-circle"></div>
-              <div class="bg-circle-2 bg-circle"></div>
-              <div class="bg-circle-3 bg-circle"></div>
-              <div class="bg-circle-4 bg-circle"></div> -->
-              </section>
-            </div>
-
-            <!-- BOTÓN VOLVER >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
-            <div class="col">
-              <section class="py-5 text-center container">
-                <div class="col-lg-6 col-md-8 mx-auto">
-                  <a href="/" class="btn btn-primary my-2" id="botonVolver">⬅️ Volver</a>
-                </div>
-              </section>
-            </div>
-    </header>
+          <!-- BOTÓN VOLVER >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
+          <div class="col">
+            <section class="py-5 text-center container">
+              <div class="col-lg-6 col-md-8 mx-auto">
+                <a href="/" class="btn btn-primary my-2" id="botonVolver">⬅️ Volver</a>
+              </div>
+            </section>
+          </div>
+  </header>
 
 
   <!-- EXITO / ERROR >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
@@ -153,7 +149,7 @@
     </div>
   </footer>
 
-  
+
   <!-- Script de Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
@@ -163,4 +159,5 @@
     crossorigin="anonymous"></script>
 
 </body>
+
 </html>

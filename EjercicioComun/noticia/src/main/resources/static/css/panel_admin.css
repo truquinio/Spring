@@ -9,8 +9,9 @@
 
 .EditDelete{
   color: #ffcb00;
+  text-decoration: none;
 }
 
-.EditDelete:hover{
+.EditDelete:hover {
   color: #6c757d;
 }
