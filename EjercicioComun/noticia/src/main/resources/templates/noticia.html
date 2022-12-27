@@ -55,7 +55,6 @@
 
 
   <!--  NOTICIA   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-
   <div class="caja-noticia">
 
     <div class="container">
@@ -66,12 +65,12 @@
     <h2 class="noti-title" th:text="${noticia.titulo}"></h2>
     <p class="noti-body" th:text="${noticia.cuerpo}"></p>
 
-    <!-- <h6 class="noti-fecha" th:text="${noticia.alta}">🗓</h6> -->
+    <!-- <h6 class="noti-fecha" th:text="${noticia.alta}">📆</h6> -->
 
     <div class="text-muted" id="noti-fecha" th:text="${#dates.format(noticia.alta, '📆 dd MMM yyyy - HH:mm')}"></div>
 
-    <!-- <small class="text-muted" id="fechaNoticia" th:text="${noticia.alta}"></small> -->
-    <!-- <small class="text-muted" th:text="${#dates.format(noticia.alta, 'dd MMM yyyy HH:mm')}"></small> -->
+    <!-- <small class="text-muted" id="fechaNoticia" th:text="${noticia.alta}"></small>
+    <small class="text-muted" th:text="${#dates.format(noticia.alta, 'dd MMM yyyy HH:mm')}"></small> -->
 
 
     <!-- BOTÓN VOLVER >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->

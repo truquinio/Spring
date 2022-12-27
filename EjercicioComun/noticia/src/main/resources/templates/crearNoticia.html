@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registro de Noticias</title>
-  
+
   <link rel="stylesheet" href="/css/reset.css">
 
   <!-- GOOGLE FONTS -->
@@ -28,34 +28,37 @@
 </head>
 
 <body>
+
   <!--  NAVBAR   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-  <nav class="navbar navbar-expand-lg navBar">
-    <div class="containerImg">
+  <header class="header">
+    <nav class="navbar navbar-expand-lg navBar">
+      <div class="containerImg">
 
-      <a th:href="@{/admin}" class="navbar-brand d-flex align-items-center">
-        <img class="logo" src="/img/admin_icon.png" alt="Img admin logo"> <b> Panel Admin</b>
-      </a>
-    </div>
+        <a th:href="@{/admin}" class="navbar-brand d-flex align-items-center">
+          <img class="logo" src="/img/admin_icon.png" alt="Img admin logo"><b> Panel Admin</b>
+        </a>
+      </div>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <!-- HOME >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
 
-    <div class="collapse navbar-collapse elementosNav" id="navbarNavDropdown">
-      <ul class="navbar-nav ms-auto elementos">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" th:href="@{/}"><b>🏠 > Home</b></a>
-        </li>
-    </div>
-    </div>
-  </nav>
+      <!-- HOME >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+      <div class="collapse navbar-collapse elementosNav" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto elementos">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" th:href="@{/}"><b>🏠 > Home</b></a>
+          </li>
+      </div>
+      </div>
+    </nav>
+  </header>
 
 
   <!-- FORMULARIO CREAR NOTICIA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
-  <header class="header">
+  <main class="main">
     <div class="container m-5">
       <h4>📰 Cargar noticia:</h4>
 
@@ -63,61 +66,65 @@
         <form action="/noticia/creando" method="post">
 
           <div class="form-group">
-            <input type="text" class="form-group" placeholder="Titulo de noticia" name="titulo" required minlength="1"
-              maxlength="500" size="100">
+
+            <input type="text" class="form-group" placeholder="Titulo de noticia" name="titulo" id="tituloNoticia"
+              required minlength="1" maxlength="500">
           </div>
 
           <div class="form-group">
             <div class="form-floating">
-              <textarea class="form-control" placeholder="Cuerpo de noticia" id="floatingTextarea2" name="cuerpo"
-                required minlength="3" maxlength="60000" size="100"></textarea>
-              <label for="floatingTextarea2">Cuerpo de la noticia</label>
+
+              <label for="cuerpoNoticia">Cuerpo de la noticia</label>
+              <textarea class="form-control" placeholder="Cuerpo de noticia" name="cuerpo" id="cuerpoNoticia" rows="4"
+                cols="50" required minlength="3" maxlength="60000"></textarea>
+              <!-- <textarea cols="70" rows="10" class="form-control" placeholder="Cuerpo de noticia" id="cuerpoNoticia" name="cuerpo"
+                required minlength="3" maxlength="60000" size="100"></textarea> -->
+
             </div>
           </div>
 
           <p>
-            <input type="file" name="Cargar foto" multiple>
+            <input type="file" name="Cargar foto" id="cargarArchivo" multiple>
           </p>
 
-          <!-- <button type="submit" class="btn btn-primary">Cargar</button> -->
 
-          <!-- BOTÓN CARGAR >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
-          <section class=" text-center container">
-            <div class="row mt-3">
-              <div class="divVolver">
-                <button type="submit" class="btn btn-xl mt-2 boton" id="botonCrear">✅ Cargar</button>
-              </div>
-            </div>
-          </section>
+          <!-- BOTÓN CARGAR + BOTÓN VOLVER  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
+          <!-- <button type="submit" class="btn btn-primary">Cargar</button> -->
+          <div class="botones">
+            <button type="submit" class="btn btn-primary mt-3" id="botonActualizar">Cargar Noticia ✅</button>
+
+            <a href="/admin"><button type="button" class="btn btn-primary mt-3" id="botonVolver">⬅️ Volver</button></a>
+          </div>
         </form>
       </div>
     </div>
-  </header>
 
 
-  <!-- EXITO / ERROR >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
-  <div th:if="${exito}!=null" class="card text-white bg-success mb-3 mt-3 mensajeExito">
-    <!-- th:if="${exito != null}" = Tag de Thymeleaf + condición -->
+    <!-- EXITO / ERROR >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
+    <div th:if="${exito}!=null" class="card text-white bg-success mb-3 mt-3 mensajeExito">
+      <!-- th:if="${exito != null}" = Tag de Thymeleaf + condición -->
 
-    <div class="card-body">
-      <h5 class="card-title">Exito! 👍</h5>
+      <div class="card-body">
+        <h5 class="card-title">Exito! 👍</h5>
 
-      <p class="card-text" th:text="${exito}"></p>
-      <!-- Llamo a la llave ${ modelo.put("exito", exception.getMessage()); } desde clase NoticiaControlador -->
+        <p class="card-text" th:text="${exito}"></p>
+        <!-- Llamo a la llave ${ modelo.put("exito", exception.getMessage()); } desde clase NoticiaControlador -->
+      </div>
     </div>
-  </div>
 
-  <!-- th:if="${error != null}" = Tag de Thymeleaf + condición -->
-  <div th:if="${error}!=null" class="card text-white bg-danger mb-3 mensajeError">
-    <!-- Llamo a la llave ${ modelo.put("error", exception.getMessage()); } desde clase NoticiaControlador -->
-
-    <div class="card-body">
-      <h5 class="card-title">Error 👎</h5>
-
+    <!-- th:if="${error != null}" = Tag de Thymeleaf + condición -->
+    <div th:if="${error}!=null" class="card text-white bg-danger mb-3 mensajeError">
       <!-- Llamo a la llave ${ modelo.put("error", exception.getMessage()); } desde clase NoticiaControlador -->
-      <p class="card-text" th:text="${error}"></p>
+
+      <div class="card-body">
+        <h5 class="card-title">Error 👎</h5>
+
+        <!-- Llamo a la llave ${ modelo.put("error", exception.getMessage()); } desde clase NoticiaControlador -->
+        <p class="card-text" th:text="${error}"></p>
+      </div>
     </div>
-  </div>
+
+  </main>
 
 
   <!-- PIE DE PÁGINA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
@@ -125,7 +132,8 @@
     <div class="containerFooter">
       <p class="mb-1">Copyright &copy; truquinio,<br> all rights reserved</p>
       <p class="mb-0">Visit my <a href="https://github.com/truquinio" class="github"><br>GitHub</a> profile or visit my
-        <a href="https://www.linkedin.com/in/federico-trucco/" class="linkedin">LinkedIn</a> profile.</p>
+        <a href="https://www.linkedin.com/in/federico-trucco/" class="linkedin">LinkedIn</a> profile.
+      </p>
       <p class="float-end mb-1">
         <a href="#" class="up-sky">⬆️ Ir al cielo</a>
       </p>
@@ -142,4 +150,5 @@
     crossorigin="anonymous"></script>
 
 </body>
+
 </html>

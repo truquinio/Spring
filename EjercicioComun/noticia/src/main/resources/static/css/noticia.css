@@ -26,8 +26,7 @@
 }
 
 .noti-body{
-  display: inline;
-
+  display: inline-block;
   background: rgb(255, 255, 255);
   text-align: justify;
 
@@ -43,7 +42,7 @@
 }
 
 #noti-fecha {
-  display: inline;
+  display: inline-block;
   text-align: center;
   background: #37474f;
   color: #ffffff;

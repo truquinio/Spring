@@ -1,4 +1,4 @@
-.header {
+.main {
 	background: #ffffff url(../img/FondoZoom.jpg) no-repeat fixed 0 0;
 	/* background-image: url(../img/FondoZoom_1.png); */
 	background-size: cover;
@@ -12,4 +12,12 @@
 	padding: auto;
 	display: flex;
 	flex-direction: column;
+}
+
+#tituloNoticia{
+	width: 50%;
+}
+
+#cuerpoNoticia{
+	width: 100%;
 }
