@@ -26,6 +26,8 @@
 .subtituloNew {
   display: inline-block;
 
+  width: 480px;
+
   font-family: Arial, sans-serif;
   color: #37474f;
   font-size: 50px;
@@ -34,18 +36,21 @@
 
 .cartoons {
   display: inline-block;
-  width: 750px;
-  height: 500px;
-  
+  width: 700px;
+  height: 450px;
+  margin-left: 20%;
 }
 
 .gridTarjetas {
   text-align: justify;
 
+  padding: 200px 100px 100px 100px;
+  /*
   padding-top: 200px;
-  padding-left: 100px;
   padding-right: 100px;
   padding-bottom: 100px;
+  padding-left: 100px;
+  */
   
   /* Alinear tarjetas en formato grilla */
   display: grid;
