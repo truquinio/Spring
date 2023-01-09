@@ -1,9 +1,11 @@
 .navBar {
   font-family: Arial, sans-serif;
   background-color: rgb(255, 255, 255) !important;
+
   width: 100%;
   padding-left: 60px;
   padding-right: 60px;
+
   box-shadow: 0px 2px 16px 4px rgba(0, 0, 0, 0.36);
   -webkit-box-shadow: 0px 2px 16px 4px rgba(0, 0, 0, 0.36);
   -moz-box-shadow: 0px 2px 16px 4px rgba(0, 0, 0, 0.36);
@@ -31,9 +33,25 @@
 
 .containerImg {
   width: 20%;
+
+  transition: 1s all;
+  cursor: pointer;
+}
+
+.containerImg:hover {
+  transform: scale(1.2);
 }
 
 .logoEgg {
   width: 40%;
   padding: auto;
+}
+
+.nav-item{
+  transition: 1s all;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  transform: scale(1.2);
 }

@@ -16,6 +16,9 @@ footer {
 .github{
   color: #ffc041;
   text-decoration: none;
+
+  transition: 1s all;
+  cursor: pointer;
 }
 
 .github:hover{
@@ -25,6 +28,9 @@ footer {
 .linkedin{
   color: #ffc041;
   text-decoration: none;
+
+  transition: 1s all;
+  cursor: pointer;
 }
 
 .linkedin:hover{
@@ -35,6 +41,9 @@ footer {
 .up-sky{
   color: #37474f;
   text-decoration: none;
+
+  transition: 1s all;
+  cursor: pointer;
 }
 
 .up-sky:hover{

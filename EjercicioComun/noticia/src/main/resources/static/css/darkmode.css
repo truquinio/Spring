@@ -1,0 +1,72 @@
+/*    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  DARK MODE  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
+#darkmode {
+  position: relative;
+  top: 0px;
+  left: 55%;
+
+  float: right;
+
+  width: 60px;
+  height: 30px;
+
+  background: #ebebeb;
+  box-shadow: inset 4px 4px 6px #cecece,
+    inset -4px -4px 6px #fff;
+
+  /* margin: 5% auto; */
+  border-radius: 25px;
+
+  cursor: pointer;
+}
+
+.moon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+.toggle {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  width: 45px;
+  height: 45px;
+
+  transform: scale(.7);
+
+  background: linear-gradient(145deg, #D8D8D8, #FFFFFF);
+
+  border-radius: 25px;
+
+  box-shadow: 2px 2px 2px #c4c4c496,
+    -2px -2px 2px #fff;
+
+  transition: 0.5s;
+}
+
+#darkmode.active .toggle {
+  left: 24px;
+  transition: 0.5s;
+}
+
+#navbar.active {
+  background: #000000 url("/src/main/resources/static/img/black.png") repeat scroll 50% 50%;
+}
+
+body.active {
+  background: #212529;
+}
+
+#subtitle.active {
+  color: #baccd6;
+}
+
+#footer.active {
+  color: #baccd6;
+}
+
+#sky.active {
+  color: #ffc041;
+}

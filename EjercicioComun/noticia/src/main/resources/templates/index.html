@@ -20,13 +20,15 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/css/navbar.css">
-  <link rel="stylesheet" href="/css/index.css">
-  <link rel="stylesheet" href="/css/botones.css">
-  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="./css/navbar.css">
+  <link rel="stylesheet" href="./css/darkmode.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/botones.css">
+  <link rel="stylesheet" href="./css/footer.css">
 </head>
 
 <body>
+  <header id="navbar">
   <!--  NAVBAR   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
   <nav class="navbar navbar-expand-lg navBar fixed-top">
     <div class="containerImg">
@@ -41,6 +43,13 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
+    <!-- DARK-MODE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <div id="darkmode">
+      <img class="sun" src="./img/sun.png">
+      <img class="moon" src="./img/moon.png">
+      <div class="toggle"></div>
+    </div>
+
 
     <!-- PANEL ADMIN >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
     <div class="collapse navbar-collapse elementosNav" id="navbarNavDropdown">
@@ -51,8 +60,9 @@
     </div>
     </div>
   </nav>
+</header>
 
-
+<main>
   <!-- EXITO / ERROR >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
 
   <!-- th:if="${exito != null}" = Tag de Thymeleaf + condición -->
@@ -83,10 +93,9 @@
       <div class="row">
         <div class="col">
 
-          <header class="header">
             <section class="contenedorMain">
               <div class="tituloNew">NOTI-EGG</div>
-              <p class="subtituloNew">¡Encontrá todas las noticias aquí!</p>
+              <p class="subtituloNew" id="subtitle">¡Encontrá todas las noticias aquí!</p>
 
               <!-- BOTÓN AMARILLO DEL INDEX >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
               <!-- <p class="tituloLibros" th:if="${session.usuariosession != null}"
@@ -109,14 +118,16 @@
 
       <div class="row row-cols-1 row-cols-md-20 g-4">
         <div class="col">
+
           <div class="card h-100" id="tarjeta">
 
             <!-- <img th:src="@{/src/main/resources/static/img/newsletter.jpg}" class="card-img-top" alt="foto-Noticia" /> -->
 
             <a th:href="@{/noticia/ver/__${noticia.id}__}" class="linkNoticia">
-              <div class="card-body">
+              
+              <div class="card-body" id="noticias">
                 <h4 class="card-title" th:text="${noticia.titulo}"></h4>
-                <p class="card-text" th:text="${noticia.cuerpo}"></p>
+                <p class="card-text" th:text="${noticia.cuerpo}" id="noticia"></p>
 
                 <div id="borderFecha">
                   <div class="card-footer">
@@ -133,16 +144,17 @@
       </div>
     </div>
   </div>
+</main>
 
 
   <!-- PIE DE PÁGINA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  -->
   <footer class="text-muted py-5">
-    <div class="containerFooter">
+    <div class="containerFooter" id="footer">
       <p class="mb-1">Copyright &copy; truquinio,<br> all rights reserved</p>
       <p class="mb-0">Visit my <a href="https://github.com/truquinio" class="github"><br>GitHub</a> profile or visit my <a
           href="https://www.linkedin.com/in/federico-trucco/" class="linkedin">LinkedIn</a> profile.</p>
       <p class="float-end mb-1">
-        <a href="#" class="up-sky">⬆️ Ir al cielo</a>
+        <a href="#" class="up-sky" id="sky">⬆️ Ir al cielo</a>
       </p>
     </div>
   </footer>
@@ -155,6 +167,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
     integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
     crossorigin="anonymous"></script>
+
+    <script src="./js/toggle.js"></script>
 
 </body>
 </html>
